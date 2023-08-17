@@ -5,10 +5,12 @@ public class Array_list_Integer {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> al = new ArrayList<Integer>();
+		System.out.println(al.size());
 		al.add(0);
 		al.add(8);
 		al.add(3);
 		al.add(1);
+		al.add(5);
 		al.add(5);
 		System.out.println(al);
 		// size
@@ -61,17 +63,69 @@ public class Array_list_Integer {
 
 		// contains
 		System.out.println(al.contains(71));
-		
+
 		// last index of giving last index value
 		int x = al.lastIndexOf(7);
 		System.out.println(x);
-		
+
 		// index of retains index value
 		int y = al.indexOf(4);
 		System.out.println(y);
-		
-		//clear
+
+		// clear
 		al.clear();
 		System.out.println(al);
+
+		// add method , return type is boolean if its add returns true doesnt it returns
+		// false
+		System.out.println(al.add(1));
+		System.out.println(al);
+		System.out.println(al.remove(0));
+		al.add(7);
+		al.add(5);
+		al.add(6);
+		System.out.println(al.indexOf(6));
+
+		// Second Array List
+		ArrayList<Integer> al2 = new ArrayList<Integer>();
+		al2.addAll(al);
+		System.out.println(al2);
+
+		// third ArrayList
+		ArrayList<Integer> al3 = new ArrayList<Integer>();
+		al3.add(11);
+		al3.add(22);
+		al3.add(33);
+		al3.add(44);
+		System.out.println(al3);
+		// add all method add a element from older array list
+		al3.addAll(al2);
+		System.out.println(al3);
+
+		// this add all method add a element for given index
+		al3.addAll(2, al2);
+		System.out.println(al3);
+
+		// sublist is create a new list of element in previous element
+		// frist index inclusive
+		// Second index exclusive
+		System.out.println(al3.subList(0, 5));
+
+		// Is empty is a method the given Arraylist is empty or not
+		// Returns boolean as a output
+		System.out.println(al3.isEmpty());
+		ArrayList<Integer> AL=new ArrayList<Integer>();
+		AL.add(123);
+		AL.add(456);
+		AL.add(789);
+		AL.add(123);
+		AL.add(456);
+		System.out.println(AL);
+		System.out.println(AL.indexOf(123));
+		System.out.println(AL.lastIndexOf(123));
+		System.out.println(AL.indexOf(456));
+		System.out.println(AL.lastIndexOf(456));
+		System.out.println(AL.indexOf(789));
+		System.out.println(AL.lastIndexOf(789));
 	}
 }
