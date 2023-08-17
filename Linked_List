@@ -1,0 +1,63 @@
+import java.util.LinkedList;
+
+public class Linked_List {
+
+	public static void main(String[] args) {
+		LinkedList ll = new LinkedList();
+		ll.add(111);
+		ll.add("String");
+		ll.add('a');
+		ll.add(true);
+		ll.add(11.1);
+		System.out.println(ll);
+		
+		// get method
+		System.out.println(ll.getFirst());
+		System.out.println(ll.getLast());
+		System.out.println(ll.get(2));
+		
+		// Add method
+		ll.addFirst(222);
+		System.out.println(ll);
+		ll.addLast("anto");
+		System.out.println(ll);
+		System.out.println(ll.add(11));
+
+		LinkedList ll1 = new LinkedList();
+		ll1.addAll(ll);
+		System.out.println(ll1);
+		// poll
+		System.out.println(ll1.pollFirst());
+		// poll frist remove frist element
+		System.out.println(ll1);
+		System.out.println(ll1.pollLast());
+		// poll last remove last element
+		System.out.println(ll1);
+		System.out.println(ll1.poll());
+		// normal poll remove frist poll
+		System.out.println(ll1);
+
+		LinkedList ll2 = new LinkedList();
+		ll2.addAll(ll);
+		System.out.println(ll2);
+		// offer
+		ll2.offer(200);
+		// offer method add a element end
+		System.out.println(ll2);
+
+		ll2.offerFirst(5000);
+		System.out.println(ll2);
+
+		ll2.offerLast(10000);
+		System.out.println(ll2);
+
+		// clone
+		LinkedList ll3=(LinkedList)ll2.clone();
+		System.out.println(ll3);
+
+		// clear
+		ll2.clear();
+		System.out.println(ll2);
+
+	}
+}
