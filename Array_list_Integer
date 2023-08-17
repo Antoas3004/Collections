@@ -61,6 +61,17 @@ public class Array_list_Integer {
 
 		// contains
 		System.out.println(al.contains(71));
-
+		
+		// last index of giving last index value
+		int x = al.lastIndexOf(7);
+		System.out.println(x);
+		
+		// index of retains index value
+		int y = al.indexOf(4);
+		System.out.println(y);
+		
+		//clear
+		al.clear();
+		System.out.println(al);
 	}
 }
