@@ -1,0 +1,66 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Array_list_Integer {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		al.add(0);
+		al.add(8);
+		al.add(3);
+		al.add(1);
+		al.add(5);
+		System.out.println(al);
+		// size
+		int size = al.size();
+		System.out.println("size of array : " + size);
+
+		// get element
+		int b = al.get(2);
+		System.out.println("get element in index 2 : " + b);
+
+		// add element in 2 in index
+		al.add(2, 4);
+		System.out.println("add 4 in index 2 : " + al);
+
+		// remove last element
+		al.remove(4);
+		System.out.println("after removing last element : " + al);
+
+		// sorting
+		Collections.sort(al);
+		System.out.println(al);
+
+		// add element
+		al.add(9);
+		System.out.println(al);
+
+		// add element
+		al.add(1, 1);
+		al.add(2, 2);
+		System.out.println(al);
+
+		// set element
+		al.set(6, 6);
+		al.set(7, 7);
+		System.out.println(al);
+
+		// reverse
+		Collections.reverse(al);
+		System.out.println(al);
+
+		// loop
+		int count = 0;
+		for (int i = 0; i < al.size(); i++) {
+			if (7 == al.get(i)) {
+				count = count + 1;
+			}
+			System.out.println(al.get(i));
+		}
+		System.out.println(count);
+
+		// contains
+		System.out.println(al.contains(71));
+
+	}
+}
