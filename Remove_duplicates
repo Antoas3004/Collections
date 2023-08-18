@@ -1,0 +1,21 @@
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+
+public class Remove_duplicates {
+
+	public static void main(String[] args) {
+		//LinkedList
+		LinkedList<Integer> ll=new LinkedList<Integer>();
+		ll.add(1);
+		ll.add(2);
+		ll.add(3);
+		ll.add(3);
+		ll.add(2);
+		ll.add(1);
+		System.out.println("before removel :"+ll);
+		
+		//Create Linked Hash Set
+		LinkedHashSet<Integer> lhs=new LinkedHashSet<Integer>(ll);
+		System.out.println("After removing : "+lhs);
+	}
+}
