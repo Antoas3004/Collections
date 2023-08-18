@@ -1,0 +1,58 @@
+import java.util.HashSet;
+
+
+public class Hash_Set {
+
+	public static void main(String[] args) {
+		HashSet<Integer> hs = new HashSet<Integer>();
+		hs.add(0);
+		hs.add(1);
+		hs.add(17);
+		hs.add(2);
+		hs.add(22);
+		hs.add(3);
+		System.out.println(hs.add(22));
+		hs.add(4);
+		hs.add(5);
+		// hash set doesn't work inserction order
+		// hash set doesn't allow duplicate
+
+		System.out.println(hs);
+
+		// contains method is check element present or not
+		System.out.println(hs.contains(44));
+
+		// clone
+		HashSet hs1 = (HashSet) hs.clone();
+		System.out.println(hs1);
+		hs1.add(11);
+		System.out.println(hs1);
+
+		// contains all is a method checks all the element present in
+		// another element
+		System.out.println(hs.containsAll(hs1));
+
+		// add all
+		HashSet<Integer> hs2 = new HashSet<Integer>();
+		hs2.addAll(hs1);
+		System.out.println(hs2);
+		hs2.add(10);
+		System.out.println(hs2);
+
+		// equals method two sets are same are not
+		System.out.println(hs1.equals(hs2));
+
+		// get class get the class package
+		System.out.println(hs2.getClass());
+
+		// hash code
+		System.out.println(hs2.hashCode());
+		System.out.println(hs.hashCode());
+		System.out.println(hs1.hashCode());
+
+		// given set is empty r not return boolean
+		System.out.println(hs1.isEmpty());
+
+		System.out.println(hs.iterator());
+	}
+}
