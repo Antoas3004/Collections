@@ -1,0 +1,19 @@
+import java.util.LinkedList;
+
+public class Collection_to_Array {
+
+	public static void main(String[] args) {
+		LinkedList<Integer> ll=new LinkedList<Integer>();
+		ll.add(1);
+		ll.add(2);
+		ll.add(3);
+		ll.add(3);
+		ll.add(2);
+		ll.add(1);
+		System.out.println("before Array :"+ll);
+		Object a[]=ll.toArray();
+		for(Object x:a) {
+			System.out.println(x);
+		}
+	}
+}
