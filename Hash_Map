@@ -1,0 +1,44 @@
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class Hash_Map {
+
+	public static void main(String[] args) {
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		hm.put(07, "Dhoni");
+		hm.put(18, "Virat");
+		hm.put(45, "Rohit");
+		hm.put(99, "Aswin");
+		hm.put(48, "Raina");
+		hm.put(1, "Kl");
+
+		System.out.println(hm);
+		Set s = hm.keySet();
+		System.out.println("key values are : " + s);
+
+		Collection c = hm.values();
+		System.out.println("collections values are : " + c);
+
+		Set s2 = hm.entrySet();
+		System.out.println("entries are : " + s2);
+
+		Iterator i = s2.iterator();
+		// while (i.hasNext()) {
+		// System.out.println(i.next());
+		// }
+
+		while (i.hasNext()) {
+			Map.Entry me = (Map.Entry) i.next();
+			// System.out.println(me.getKey() + " : " + me.getValue());
+			if (me.getKey().equals(48)) {
+				me.setValue("tom latham");
+				System.out.println(me.getValue());
+			}
+			System.out.println(me);
+		}
+
+	}
+}
