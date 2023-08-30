@@ -1,0 +1,29 @@
+import java.util.TreeMap;
+
+public class Tree_Map {
+
+	public static void main(String[] args) {
+		TreeMap tm = new TreeMap();
+		tm.put(1, 'A');
+		tm.put(3, 'C');
+		tm.put(5, 'E');
+		tm.put(2, 'B');
+		tm.put(4, 'D');
+		tm.put(8, 't');
+
+		System.out.println(tm);
+
+		System.out.println("frist entry : " + tm.firstEntry());
+
+		System.out.println("last entry : " + tm.lastEntry());
+
+		System.out.println("frist key : " + tm.firstKey());
+
+		System.out.println("last key : " + tm.lastKey());
+
+		System.out.println(tm.ceilingEntry(4));
+		
+		System.out.println(tm.ceilingKey(6));
+
+	}
+}
