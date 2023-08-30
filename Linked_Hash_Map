@@ -1,0 +1,38 @@
+import java.util.LinkedHashMap;
+
+public class Linked_Hash_Map {
+
+	public static void main(String[] args) {
+		LinkedHashMap lhm = new LinkedHashMap();
+		lhm.put(1, "java");
+		lhm.put(3, "html");
+		lhm.put(2, "css");
+		lhm.put(5, "Sql");
+		lhm.put(4, "javascript");
+		System.out.println(lhm);
+
+		LinkedHashMap lhm1 = new LinkedHashMap();
+		lhm1.putAll(lhm);
+		System.out.println(lhm1);
+
+		lhm1.remove(2);
+		System.out.println(lhm1);
+
+		lhm1.put(8, "css");
+		System.out.println(lhm1);
+
+		System.out.println(lhm1.containsKey(2));
+		System.out.println(lhm1.containsKey(5));
+		System.out.println(lhm1.containsValue("css"));
+
+		lhm1.replace(3, "sql");
+		System.out.println(lhm1);
+
+		System.out.println(lhm1.isEmpty());
+		
+		System.out.println(lhm1.size());
+		
+		System.out.println(lhm);
+
+	}
+}
